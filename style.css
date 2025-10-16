@@ -1,0 +1,102 @@
+/* Modern Neon Style */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #111827, #000);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.title {
+  color: #00ffff;
+  margin-bottom: 25px;
+  text-shadow: 0 0 15px #00ffff;
+  letter-spacing: 2px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.cell {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid #00ffff;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+  transition: all 0.3s ease;
+}
+
+.cell:hover {
+  background-color: rgba(0, 255, 255, 0.15);
+  box-shadow: 0 0 20px #00ffff;
+  transform: scale(1.05);
+}
+
+.status p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+button {
+  padding: 10px 25px;
+  background-color: #00ffff;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #00e0e0;
+  box-shadow: 0 0 20px #00ffff;
+  transform: scale(1.05);
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+@media (max-width: 600px) {
+  .board {
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 8px;
+  }
+}
